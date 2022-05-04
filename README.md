@@ -14,7 +14,7 @@ and maintained with similar standards as the core frameworks.
 ## How do I publish a plugin here?
 
 Before proposing a plugin, please reach out to us for advise.
-
+This could be for example via email, chats, or just opening a ticket here.
 
 Plugins are modules or sub-packages in the `cobald_hep_plugins` folder.
 To add a new plugin, simply open a pull request that adds your plugin.
