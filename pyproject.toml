@@ -4,7 +4,7 @@ build-backend = "flit_core.buildapi"
 
 [project]
 dynamic = ["version", "description"]
-name = "cobald_hep_plugins"
+name = "cobald-hep-plugins"
 maintainers = [
     {name = "Max Fischer", email = "maxfischer2781@gmail.com"},
     {name = "MatterMiners", email = "matterminers@lists.kit.edu"},
@@ -24,7 +24,11 @@ classifiers = [
 license = {"file" = "LICENSE"}
 keywords = ["cobald", "tardis", "High Energy Physics"]
 requires-python = "~=3.6"
-dependencies = ["typing_extensions; python_version<'3.8'"]
+dependencies = [
+    "cobald",
+    "cobald-tardis",
+    "typing_extensions; python_version<'3.8'",
+]
 
 [project.optional-dependencies]
 test = [
@@ -42,3 +46,6 @@ doc = ["sphinx"]
 [project.urls]
 Documentation = "https://cobald-hep-plugins.readthedocs.io/"
 Source = "https://github.com/MatterMiners/cobald-hep-plugins"
+
+[tool.flit.module]
+name = "cobald_hep_plugins"

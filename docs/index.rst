@@ -7,7 +7,7 @@ Welcome to cobald-hep-plugins's documentation!
    :caption: Available Plugins
    :hidden:
 
-   source/plugin/none
+   source/plugin/example
 
 .. toctree::
    :maxdepth: 2
