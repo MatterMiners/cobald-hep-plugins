@@ -7,14 +7,14 @@ Welcome to cobald-hep-plugins's documentation!
    :caption: Available Plugins
    :hidden:
 
-   source/plugin/example
+   plugins/example
 
 .. toctree::
    :maxdepth: 2
    :caption: Development & Maintenance
    :hidden:
 
-   source/contributing
+   contributing
 
 Indices and tables
 ==================
