@@ -1,6 +1,6 @@
 from cobald.interfaces import Pool, PoolDecorator
 
-from ..utility import enforce
+from cobald.utility import enforce
 
 import asyncio
 
