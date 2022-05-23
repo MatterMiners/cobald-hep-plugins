@@ -24,7 +24,7 @@ class Stopper(PoolDecorator):
 
     @property
     def demand(self) -> float:
-        return self._demand
+        return self.target.demand
 
     @demand.setter
     def demand(self, value: float):
