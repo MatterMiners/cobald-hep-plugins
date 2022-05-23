@@ -10,7 +10,7 @@ from cobald.daemon import service
 @service(flavour=asyncio)
 class Stopper(PoolDecorator):
     """
-    Decorator that sets demand to 0 if the partition has no pending jobs
+    Decorator that sets demand to 0 if there are no pending jobs
 
     :param target: the pool
     :param script: path to script that checks for pending jobs
