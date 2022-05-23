@@ -22,7 +22,8 @@ class TestStopper(object):
         for pend_jobs in (2, 7, 150, 5000):
             stopper.n_pend_jobs = pend_jobs
             for value in (0, 1, 5, 10, 1000):
-                assert stopper._condition_slurm(value) == value
+               stopper.demand = value
+               assert stopper.demand == value
 
     def test_idle(self):
         pool = MockPool()
