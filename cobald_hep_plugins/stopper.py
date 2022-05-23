@@ -39,7 +39,7 @@ class Stopper(PoolDecorator):
                 stderr=asyncio.subprocess.PIPE,
             )
             stdout, stderr = await proc.communicate()
-            self.n_pend_jobs = int(stdout.decode("ascii").strip())
+            self.n_pend_jobs = int(stdout.decode("ascii"))
             await asyncio.sleep(self.interval)
 
     def __init__(
