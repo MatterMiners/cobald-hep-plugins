@@ -51,7 +51,6 @@ class Stopper(PoolDecorator):
         super().__init__(target)
         enforce(interval > 0, ValueError("interval must be positive"))
         enforce(script != "", ValueError("script must be specified"))
-        self._demand = target.demand
         self.interval = interval
         self.n_pend_jobs = 0
         self.script = script

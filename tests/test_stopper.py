@@ -32,4 +32,5 @@ class TestStopper(object):
         stopper.n_pend_jobs = 0
 
         for value in (0, 1, 5, 10, 1000):
-            assert stopper._condition_slurm(value) == 0
+            stopper.demand = value
+            assert stopper.demand == 0
