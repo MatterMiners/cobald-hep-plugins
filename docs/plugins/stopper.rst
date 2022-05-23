@@ -3,7 +3,7 @@ Start/Stop Plugin
 #################
 
 .. py:module:: cobald_hep_plugins.stopper
-    :synopsis: Stops the booting of new drones if there are no pending jobs on the monitored partition
+    :synopsis: Stops the booting of new drones if there are no pending jobs
 
 This plugin sets the demand to 0 and keeps it at 0 as long as there are no pending jobs on the monitored partition. If there are pending jobs on the partition, the demand is not modified by the plugin.
 
