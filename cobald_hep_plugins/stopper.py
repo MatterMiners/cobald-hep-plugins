@@ -13,7 +13,7 @@ class Stopper(PoolDecorator):
     Decorator that sets demand to 0 if the partition has no pending jobs
 
     :param target: the pool
-    :param script: script that checks for pending jobs on the partition
+    :param script: path to script that checks for pending jobs
     :param interval: interval in seconds between execution of the script
 
     If there are pending jobs on the partition, the demand is not modified.
