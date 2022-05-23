@@ -28,15 +28,7 @@ class Stopper(PoolDecorator):
 
     @demand.setter
     def demand(self, value: float):
-        self._demand = self._condition_slurm(value)
-        self.target.demand = self._demand
-
-    def _condition_slurm(self, value):
-        """Return 0 if there are no pending jobs, otherwise pass `value`"""
-        if self.n_pend_jobs == 0:
-            return 0
-        else:
-            return value
+        self.target.demand = value if self.n_pend_jobs else 0
 
     async def run(self):
         """Retrieve the number of pending jobs"""
