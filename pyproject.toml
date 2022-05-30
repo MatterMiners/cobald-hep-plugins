@@ -25,7 +25,7 @@ license = {"file" = "LICENSE"}
 keywords = ["cobald", "tardis", "High Energy Physics"]
 requires-python = "~=3.6"
 dependencies = [
-    "cobald",
+    "cobald~=0.12",
     "cobald-tardis",
     "typing_extensions; python_version<'3.8'",
 ]
