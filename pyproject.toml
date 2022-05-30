@@ -51,6 +51,7 @@ Source = "https://github.com/MatterMiners/cobald-hep-plugins"
 [project.entry-points."cobald.config.yaml_constructors"]
 # v name used in YAML v    v --- package/module --- v v class/function
 CobaldHepProjectExample = "cobald_hep_plugins.example:DemandScale"
+Stopper = "cobald_hep_plugins.stopper:Stopper"
 
 [tool.flit.module]
 name = "cobald_hep_plugins"

@@ -1,8 +1,8 @@
 import pytest
 
-from .utility import MockPool
-
 from cobald_hep_plugins.stopper import Stopper
+
+from .utility import MockPool, cobald_yaml_config, get_cobald_config_section
 
 
 class TestStopper(object):
@@ -34,3 +34,18 @@ class TestStopper(object):
         for value in (0, 1, 5, 10, 1000):
             stopper.demand = value
             assert stopper.demand == 0
+
+
+def test_load_yaml_tag():
+    """Test that the plugin can be loaded via a YAML !tag"""
+    with cobald_yaml_config(
+        """
+pipeline:
+    - !Stopper
+      script: "test.sh"
+    - !MockPool
+        """
+    ) as config:
+        # the plugin should be the leading element of the `pipeline` section
+        plugin_decorator = get_cobald_config_section(config, "pipeline")[0]
+        assert isinstance(plugin_decorator, Stopper)
