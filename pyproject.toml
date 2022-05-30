@@ -47,5 +47,10 @@ doc = ["sphinx"]
 Documentation = "https://cobald-hep-plugins.readthedocs.io/"
 Source = "https://github.com/MatterMiners/cobald-hep-plugins"
 
+# YAML Tag Plugins for use in cobald YAML configurations
+[project.entry-points."cobald.config.yaml_constructors"]
+# v name used in YAML v    v --- package/module --- v v class/function
+CobaldHepProjectExample = "cobald_hep_plugins.example:DemandScale"
+
 [tool.flit.module]
 name = "cobald_hep_plugins"
