@@ -4,7 +4,7 @@ import pytest
 from cobald_hep_plugins import example
 
 # test utilities used by several tests
-from .utility import MockPool
+from .utility import MockPool, cobald_yaml_config, get_cobald_config_section
 
 
 # `parametrize` to run a test for multiple cases
@@ -25,3 +25,17 @@ def test_scale_invalid():
     pool = MockPool()
     with pytest.raises(ValueError):
         example.DemandScale(pool, 0)
+
+
+def test_load_yaml_tag():
+    """Test that the plugin can be loaded via a YAML !tag"""
+    with cobald_yaml_config(
+        """
+pipeline:
+    - !CobaldHepProjectExample
+    - !MockPool
+        """
+    ) as config:
+        # the plugin should be the leading element of the `pipeline` section
+        plugin_decorator = get_cobald_config_section(config, "pipeline")[0]
+        assert isinstance(plugin_decorator, example.DemandScale)
