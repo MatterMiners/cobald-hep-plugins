@@ -2,15 +2,16 @@
 
 [![Documentation Status](https://readthedocs.org/projects/cobald-hep-plugins/badge)](https://cobald-hep-plugins.readthedocs.io)
 
-This package collects official and third-party plugins.
+This package collects official and third-party plugins
+for the `COBalD`_/`TARDIS`_ resource manager.
 
-## Do I use these plugins?
+## How do I use these plugins?
 
 The plugins work like the basic COBalD/TARDIS components:
 install the package and the plugins are automatically available
 in configuration and code.
 
-The package is directly available via `pip` and should be installed
+The package is directly available via `pip` and must be installed
 to the same `python3` environment as COBalD/TARDIS.
 ```bash
 $ python3 -m pip install cobald-hep-plugins
@@ -31,7 +32,7 @@ and maintained with similar standards as the core frameworks.
 ## How do I publish a plugin here?
 
 Before proposing a plugin, please reach out to us for advise.
-This could be for example via email, chats, or just opening a ticket here.
+This could be for example via email, chats, or just opening a ticket.
 
 To add a new plugin,
 [head to our GitHub repository](https://github.com/MatterMiners/cobald-hep-plugins)
