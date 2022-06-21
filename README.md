@@ -6,7 +6,7 @@ This package collects official and third-party plugins.
 
 ## Do I use these plugins?
 
-The plugins work just like the basic COBalD/TARDIS components:
+The plugins work like the basic COBalD/TARDIS components:
 install the package and the plugins are automatically available
 in configuration and code.
 
@@ -17,7 +17,7 @@ $ python3 -m pip install cobald-hep-plugins
 ```
 
 Consult [the documentation](https://cobald-hep-plugins.readthedocs.io)
-on how to use each individual plugin.
+on how to use individual plugins.
 
 ## Do I have to publish plugins here?
 
@@ -37,7 +37,7 @@ To add a new plugin,
 [head to our GitHub repository](https://github.com/MatterMiners/cobald-hep-plugins)
 and open a pull request that adds your plugin.
 Plugins are modules or sub-packages in the `cobald_hep_plugins` folder
-and sometimes some additional meta-data.
+that can also come with additional meta-data.
 See the `cobald_hep_plugins/example` as a template.
 
 In addition to the plugin itself, you should provide
