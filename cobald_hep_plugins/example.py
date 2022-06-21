@@ -6,7 +6,7 @@ class DemandScale(PoolDecorator):
     Example decorator that scales demand
     """
 
-    def __init__(self, target, scale: int = 0):
+    def __init__(self, target, scale: int = 1):
         if scale <= 0:
             raise ValueError(f"scale must be larger than 0, not {scale}")
         super().__init__(target)
