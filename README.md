@@ -3,7 +3,8 @@
 [![Documentation Status](https://readthedocs.org/projects/cobald-hep-plugins/badge)](https://cobald-hep-plugins.readthedocs.io)
 
 This package collects official and third-party plugins
-for the `COBalD`_/`TARDIS`_ resource manager.
+for the [COBalD](https://github.com/MatterMiners/cobald) /
+[TARDIS](https://github.com/MatterMiners/tardis) resource manager.
 
 ## How do I use these plugins?
 
