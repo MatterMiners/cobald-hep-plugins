@@ -25,7 +25,7 @@ license = {"file" = "LICENSE"}
 keywords = ["cobald", "tardis", "High Energy Physics"]
 requires-python = "~=3.6"
 dependencies = [
-    "cobald",
+    "cobald~=0.12",
     "cobald-tardis",
     "typing_extensions; python_version<'3.8'",
 ]
@@ -46,6 +46,12 @@ doc = ["sphinx"]
 [project.urls]
 Documentation = "https://cobald-hep-plugins.readthedocs.io/"
 Source = "https://github.com/MatterMiners/cobald-hep-plugins"
+
+# YAML Tag Plugins for use in cobald YAML configurations
+[project.entry-points."cobald.config.yaml_constructors"]
+# v name used in YAML v    v --- package/module --- v v class/function
+CobaldHepProjectExample = "cobald_hep_plugins.example:DemandScale"
+Stopper = "cobald_hep_plugins.stopper:Stopper"
 
 [tool.flit.module]
 name = "cobald_hep_plugins"
