@@ -37,7 +37,7 @@ class Stopper(PoolDecorator):
     async def run(self):
         """Retrieve the number of pending jobs"""
         while True:
-            status = await self.executor.run_command(f". {self.script}")
+            status = await self.executor.run_command(f"{self.script}")
             self.n_pend_jobs = int(status.stdout)
             await asyncio.sleep(self.interval)
 
