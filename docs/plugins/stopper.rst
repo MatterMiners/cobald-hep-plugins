@@ -15,6 +15,10 @@ The plugin is configured via the COBalD configuration file. The available parame
 
 ``executor`` defines how the script is executed, e.g. in the shell or via an SSH connection. The default is the execution in the shell via ShellExecutor.
 
+.. versionadded:: 0.12.1
+
+    The ``executor`` parameter.
+
 An example configuration of the plugin in a COBalD configuration file using the YAML interface is:
 
 .. code:: yaml
