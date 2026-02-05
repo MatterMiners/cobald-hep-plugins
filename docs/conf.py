@@ -12,15 +12,14 @@
 #
 import pathlib
 import sys
-
 sys.path.insert(0, str(pathlib.Path(__file__).parent.parent.absolute()))
 
 
 # -- Project information -----------------------------------------------------
 
-project = "cobald-hep-plugins"
-copyright = "2022, MatterMiners"
-author = "MatterMiners"
+project = 'cobald-hep-plugins'
+copyright = '2022, MatterMiners'
+author = 'MatterMiners'
 
 
 # -- General configuration ---------------------------------------------------
@@ -29,20 +28,20 @@ author = "MatterMiners"
 # extensions coming with Sphinx (named 'sphinx.ext.*') or your custom
 # ones.
 extensions = [
-    "sphinx.ext.autodoc",
-    "sphinx.ext.intersphinx",
-    "sphinx.ext.todo",
-    "sphinx.ext.imgmath",
-    "sphinx.ext.viewcode",
+    'sphinx.ext.autodoc',
+    'sphinx.ext.intersphinx',
+    'sphinx.ext.todo',
+    'sphinx.ext.imgmath',
+    'sphinx.ext.viewcode',
 ]
 
 # Add any paths that contain templates here, relative to this directory.
-templates_path = ["_templates"]
+templates_path = ['_templates']
 
 # List of patterns, relative to source directory, that match files and
 # directories to ignore when looking for source files.
 # This pattern also affects html_static_path and html_extra_path.
-exclude_patterns = ["_build", "Thumbs.db", ".DS_Store"]
+exclude_patterns = ['_build', 'Thumbs.db', '.DS_Store']
 
 # whether to include module paths in names
 add_module_names = False
@@ -52,15 +51,15 @@ add_module_names = False
 # The theme to use for HTML and HTML Help pages.  See the documentation for
 # a list of builtin themes.
 #
-html_theme = "alabaster"
+html_theme = 'alabaster'
 html_theme_options = {
     "description": "COBalD/TARDIS Plugins for High Energy Physics",
-    "github_user": "MatterMiners",
-    "github_repo": "cobald-hep-plugins",
+    'github_user': 'MatterMiners',
+    'github_repo': 'cobald-hep-plugins',
     "fixed_sidebar": True,
 }
 
 # Add any paths that contain custom static files (such as style sheets) here,
 # relative to this directory. They are copied after the builtin static files,
 # so a file named "default.css" will overwrite the builtin "default.css".
-html_static_path = ["_static"]
+html_static_path = ['_static']
