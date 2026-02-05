@@ -38,12 +38,14 @@ class TestStopper(object):
 
 def test_load_yaml_tag():
     """Test that the plugin can be loaded via a YAML !tag"""
-    with cobald_yaml_config("""
+    yaml_string = """
 pipeline:
     - !Stopper
       script: "test.sh"
     - !MockPool
-        """) as config:
+"""
+
+    with cobald_yaml_config(yaml_string) as config:
         # the plugin should be the leading element of the `pipeline` section
         plugin_decorator = get_cobald_config_section(config, "pipeline")[0]
         assert isinstance(plugin_decorator, Stopper)
