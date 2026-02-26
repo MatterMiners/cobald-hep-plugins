@@ -27,6 +27,7 @@ HEP Plugins for COBalD/TARDIS
    :caption: Available Plugins
    :hidden:
 
+   plugins/timer
    plugins/stopper
    plugins/example
 

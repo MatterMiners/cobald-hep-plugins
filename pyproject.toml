@@ -32,6 +32,7 @@ dependencies = [
 [project.optional-dependencies]
 test = [
     "pytest",
+    "pytest-asyncio",
     "flake8",
     "flake8-bugbear",
     "black; implementation_name=='cpython'",
@@ -51,6 +52,7 @@ Source = "https://github.com/MatterMiners/cobald-hep-plugins"
 # v name used in YAML v    v --- package/module --- v v class/function
 CobaldHepProjectExample = "cobald_hep_plugins.example:DemandScale"
 Stopper = "cobald_hep_plugins.stopper:Stopper"
+Timer = "cobald_hep_plugins.timer:Timer"
 
 [tool.flit.module]
 name = "cobald_hep_plugins"
